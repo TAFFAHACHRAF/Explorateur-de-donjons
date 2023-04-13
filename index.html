@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game Screen</title>
+    <style>
+      /* Styling for the grid */
+      #grid {
+        display: grid;
+        grid-template-columns: repeat(10, 50px);
+        grid-template-rows: repeat(10, 50px);
+        gap: 2px;
+        background-color: #eee;
+        padding: 10px;
+      }
+
+      /* Styling for each grid cell */
+      .cell {
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid"></div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
