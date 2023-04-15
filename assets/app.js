@@ -56,6 +56,9 @@ document.addEventListener('keydown', (event) => {
 
     score=score-50
     document.getElementById('file').value = energie;
+    if(energie<30){
+      document.getElementById('file').style = "background-color: red;";
+    }
     document.getElementById('energie').textContent = "Energie : "+energie;
     document.getElementById('score').textContent = "Score : "+score;
     currentTile.classList.remove('trap');
