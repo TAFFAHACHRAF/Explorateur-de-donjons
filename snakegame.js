@@ -6,6 +6,7 @@ const moveDelay = 200; // in milliseconds
 let lastMoveTime = 0;
 let score = 0;
 let activeItemIndex = 0;
+let energie = 40;
 
 for (let i = 0; i < numItems; i++) {
   const gridItem = document.createElement("div");
@@ -43,13 +44,24 @@ document.addEventListener('keydown', (event) => {
 
   const currentTile = gridItems[activeItemIndex];
   if (currentTile.classList.contains('trap')) {
-    // alert(`Game over! Your score is ${score}`);
-    // location.reload(); // restart the game
+    energie=energie-1;
+
+    if(energie == 0){
+        alert("Your final score is : "+score)
+        window.location.reload()
+    }
+
+    score=score-50
+    document.getElementById('energie').textContent = "Energie : "+energie;
+    document.getElementById('score').textContent = "Score : "+score;
     currentTile.classList.remove('trap');
   } else if (currentTile.classList.contains('treasure')) {
-    score++;
-    document.getElementById('score').textContent = score;
+    score=score+1000;
+    document.getElementById('score').textContent = "Score : "+score;
     currentTile.classList.remove('treasure');
+  }else{
+    score=score-10
+    document.getElementById('score').textContent = "Score : "+score;
   }
 
   currentTile.classList.add('active');
