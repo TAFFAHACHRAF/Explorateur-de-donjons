@@ -17,5 +17,15 @@
   
   .active {
 	background-color: red;
+}
+
+
+  .trap {
+	background-color: yellow;
   }
+  
+  .treasure {
+	background-color: green;
+  }
+  
   
