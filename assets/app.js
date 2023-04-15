@@ -25,7 +25,7 @@ gridItems[activeItemIndex].classList.add('active');
 document.addEventListener('keydown', (event) => {
   const currentTime = Date.now();
   if (currentTime - lastMoveTime < moveDelay) {
-    return; // wait for moveDelay before allowing a new move
+    return; 
   }
 
   lastMoveTime = currentTime;
@@ -48,7 +48,6 @@ document.addEventListener('keydown', (event) => {
     catSound.play();
     energie=energie-1;
 
-
     if(energie == 0){
         alert("Your final score is : "+score)
         window.location.reload()
@@ -63,7 +62,6 @@ document.addEventListener('keydown', (event) => {
     document.getElementById('score').textContent = "Score : "+score;
     currentTile.classList.remove('trap');
   } else if (currentTile.classList.contains('treasure')) {
-      // Play the cat sound
       var catSound = document.getElementById("cat-sound-treasure");
       catSound.play();
     score=score+1000;

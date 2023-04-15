@@ -5,67 +5,58 @@
 	margin: 50px auto;
 	width: 800px;
 	height: 800px;
-	/* border: 5px solid #333; /* 
-	/* add a border for visual appeal  */
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);  
 	position: relative; 
-	}
-	
-	.grid-item {
-		background-color: wheat;
-		/* border: 0px solid gray; */
-		width: 100%;
-		height: 100%;
-		position: relative; /* set the item's position to relative */
-	}
-	
-	.active {
-	/* background-color: pink; */
+}
+
+.grid-item {
+	background-color: #F2DEBA;
+	width: 100%;
+	height: 100%;
+	position: relative; 
+}
+
+.active {
 	background-size: 30px 30px;
 	background-image:url('./images/cat.png') ;
 	background-repeat: no-repeat;
-	background-position: center; /* align the background image in the center of the div */
-	/* box-shadow: 0px 0px 10px rgba(255, 0, 127, 0.7); add a shadow effect */
-	}
-	
-	.trap {
-	/* background-color: brown; */
+	background-position: center; 
+}
+
+.trap {
 	background-size: 30px 30px;
 	background-image:url('./images/bear-trap.png') ;
 	background-repeat: no-repeat;
-	background-position: center; /* align the background image in the center of the div */
-	/* box-shadow: 0px 0px 10px rgba(165, 42, 42, 0.7); add a shadow effect */
-	}
-	
-	.treasure {
-		background-size: 30px 30px;
-		/* background-color: yellow; */
+	background-position: center; 
+}
+
+.treasure {
+	background-size: 30px 30px;
 	background-image:url('./images/treasure.png') ;
 	background-repeat: no-repeat;
-	background-position: center; /* align the background image in the center of the div */
-	/* box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.7); add a shadow effect */
-	}
-	
-	.score {
-		position: absolute;  
-		top: 10px;
-		right: 10px;
-		background-color: #333;
-		color: white;
-		padding: 10px;
-		border-radius: 5px;
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-		font-size: 24px;
-		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	}	
+	background-position: center; 
+}
 
-	#progress{
-		margin-top: 2%;
-		margin-left: 30%;
-	}
+.score {
+	position: absolute;  
+	top: 10px;
+	right: 10px;
+	background-color: #333;
+	color: white;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	font-size: 24px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}	
 
-	progress[value]::-webkit-progress-bar {
-		background-color: white;
-	}
+#progress{
+	margin-top: 2%;
+	margin-left: 30%;
+}
+
+progress[value]::-webkit-progress-bar {
+	background-color: white;
+}
+
 	
-	  
