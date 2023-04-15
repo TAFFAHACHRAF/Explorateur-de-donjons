@@ -8,10 +8,20 @@
 
   </head>
   <body>
-	<div id="grid-container">
+  <label for="file">Downloading progress:</label>
+  <progress id="file" value="40" max="40"> 100% </progress>
+	<div id="grid-container"></div>
 	</div>
 	<div id="score">Score : 0</div>
 	<div id="energie">Energie : 40</div>
+  <audio id="cat-sound-treasure">
+    <source src="assets/sounds/treasure.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="cat-sound-trap">
+    <source src="assets/sounds/trap.mp3" type="audio/mpeg">
+  </audio>
+  
 		
 	<script src="assets/app.js" defer></script>
 

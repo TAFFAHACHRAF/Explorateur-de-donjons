@@ -5,15 +5,16 @@
 	margin: 50px auto;
 	width: 800px;
 	height: 800px;
-	background-color: lightgray;
-	border: 5px solid #333; /* add a border for visual appeal /
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); / add a shadow effect /
-	position: relative; / set the container's position to relative */
+	background-color: red;
+	/* border: 5px solid #333; /* 
+	/* add a border for visual appeal  */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);  
+	position: relative; 
 	}
 	
 	.grid-item {
-		background-color: white;
-		border: 0px solid gray;
+		background-color: wheat;
+		/* border: 0px solid gray; */
 		width: 100%;
 		height: 100%;
 		position: relative; /* set the item's position to relative */
@@ -21,22 +22,28 @@
 	
 	.active {
 	/* background-color: pink; */
-	background-image:url('./images/dog.png') ;
+	background-size: 30px 30px;
+	background-image:url('./images/cat.png') ;
 	background-repeat: no-repeat;
+	background-position: center; /* align the background image in the center of the div */
 	/* box-shadow: 0px 0px 10px rgba(255, 0, 127, 0.7); add a shadow effect */
 	}
 	
 	.trap {
 	/* background-color: brown; */
-	background-image:url('./images/trap.png') ;
+	background-size: 30px 30px;
+	background-image:url('./images/bear-trap.png') ;
 	background-repeat: no-repeat;
+	background-position: center; /* align the background image in the center of the div */
 	/* box-shadow: 0px 0px 10px rgba(165, 42, 42, 0.7); add a shadow effect */
 	}
 	
 	.treasure {
-	/* background-color: yellow; */
+		background-size: 30px 30px;
+		/* background-color: yellow; */
 	background-image:url('./images/treasure.png') ;
 	background-repeat: no-repeat;
+	background-position: center; /* align the background image in the center of the div */
 	/* box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.7); add a shadow effect */
 	}
 	

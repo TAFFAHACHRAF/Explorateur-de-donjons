@@ -44,7 +44,10 @@ document.addEventListener('keydown', (event) => {
 
   const currentTile = gridItems[activeItemIndex];
   if (currentTile.classList.contains('trap')) {
+    var catSound = document.getElementById("cat-sound-trap");
+    catSound.play();
     energie=energie-1;
+
 
     if(energie == 0){
         alert("Your final score is : "+score)
@@ -52,10 +55,14 @@ document.addEventListener('keydown', (event) => {
     }
 
     score=score-50
+    document.getElementById('file').value = energie;
     document.getElementById('energie').textContent = "Energie : "+energie;
     document.getElementById('score').textContent = "Score : "+score;
     currentTile.classList.remove('trap');
   } else if (currentTile.classList.contains('treasure')) {
+      // Play the cat sound
+      var catSound = document.getElementById("cat-sound-treasure");
+      catSound.play();
     score=score+1000;
     document.getElementById('score').textContent = "Score : "+score;
     currentTile.classList.remove('treasure');
