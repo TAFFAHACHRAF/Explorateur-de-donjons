@@ -5,7 +5,7 @@ const moveDelay = 200; // in milliseconds
 
 let lastMoveTime = 0;
 let score = 0;
-let activeItemIndex = 0;
+let activeItemIndex = 188;
 let energie = 40;
 
 for (let i = 0; i < numItems; i++) {
@@ -20,7 +20,10 @@ for (let i = 0; i < numItems; i++) {
 }
 
 const gridItems = document.querySelectorAll('.grid-item');
+gridItems[activeItemIndex].classList.remove('trap');
+gridItems[activeItemIndex].classList.remove('treasure');
 gridItems[activeItemIndex].classList.add('active');
+
 
 document.addEventListener('keydown', (event) => {
   const currentTime = Date.now();
@@ -44,20 +47,13 @@ document.addEventListener('keydown', (event) => {
 
   const currentTile = gridItems[activeItemIndex];
   if (currentTile.classList.contains('trap')) {
+    gameOver();
+
     var catSound = document.getElementById("cat-sound-trap");
     catSound.play();
     energie=energie-1;
-
-    if(energie == 0){
-        alert("Your final score is : "+score)
-        window.location.reload()
-    }
-
     score=score-50
     document.getElementById('file').value = energie;
-    if(energie<30){
-      document.getElementById('file').style = "background-color: red;";
-    }
     document.getElementById('energie').textContent = "Energie : "+energie;
     document.getElementById('score').textContent = "Score : "+score;
     currentTile.classList.remove('trap');
@@ -74,3 +70,20 @@ document.addEventListener('keydown', (event) => {
 
   currentTile.classList.add('active');
 });
+
+function gameOver() {
+  if(energie==0){
+    var answer = confirm("Game Over! Do you want to retry? "+" Score : "+score);
+    if (answer == true) {
+      location.reload();
+    } 
+  }
+}
+
+document.getElementById("exiteGame").onclick = () =>{
+  location.reload();
+}
+
+
+
+

@@ -1,34 +1,36 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Snake Game JavaScript | CodingNepal</title>
+    <title>Dungeon Explorer</title>
     <link rel="stylesheet" href="assets/style.css">
-
   </head>
+
   <body bgcolor="#FAECD6">
+    <h1>Dungeon Explorer</h1>
     <div id="progress">
-      <label for="file"><b>Energie :</b></label>
-      <progress id="file" value="40" max="40" style="background-color: white;"> 100% </progress>
-      <div id="score">Score : 0</div>
+      <label for="file"><div id="score">Score : 0</div></label>
+      Energie (%) : <progress id="file" value="40" max="40" style="background-color: white;"> 100% </progress>
+      <div id="energie">Energie : </div>
+      <div style="margin-top: 1%;">
+        ⬆ : move up <br>
+        ⮕ : move left <br>
+        ⬇ : move down <br>
+        ⬅ : move right <br>
+      </div>
+      <button style="margin-left: 20%;" id="exiteGame">Exit Dungeon (E)</button>
     </div>
-
   
-	<div id="grid-container"></div>
-	</div>
-	<div id="score">Score : 0</div>
-	<div id="energie">Energie : 40</div>
-  <audio id="cat-sound-treasure">
-    <source src="assets/sounds/treasure.mp3" type="audio/mpeg">
-  </audio>
+	  <div id="grid-container"></div>
 
-  <audio id="cat-sound-trap">
-    <source src="assets/sounds/trap.mp3" type="audio/mpeg">
-  </audio>
+    <audio id="cat-sound-treasure">
+      <source src="assets/sounds/treasure.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="cat-sound-trap">
+      <source src="assets/sounds/trap.mp3" type="audio/mpeg">
+    </audio>
   
-		
 	<script src="assets/app.js" defer></script>
-
   </body>
 </html>
